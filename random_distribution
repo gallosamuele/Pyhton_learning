@@ -1,0 +1,56 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import random as rd
+
+# crea un array 100*10 di numeri causali
+arrays = [np.array([rd.random() for _ in range(100)]) for _ in range(10)]
+
+# bubble sort
+def bubble_sort(arr):
+    arr = arr.copy()           # lavora su una copia se si vuole preservare l'originale
+    n = len(arr)
+    for i in range(n):
+        swapped = False
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+                swapped = True
+        if not swapped:       # ottimizzazione: se niente è stato scambiato, è già ordinato
+            break
+    return arr
+
+# Applichiamo bubble_sort a tutte e 10 le sotto-liste
+sorted_lists = [bubble_sort(a) for a in arrays]
+
+# Concatenare tutti i valori in un unico array 1000 valori (10*100)
+sorted_array = np.concatenate(sorted_lists)
+# Frequenza in percentuale di ogni valore
+frequencies, bin_edges = np.histogram(sorted_array, bins=10, range=((0.0, 1.0)))
+frequencies = frequencies / len(sorted_array) * 100
+
+#istogramma dei valori
+plt.bar(bin_edges[:-1], frequencies, width=0.1, edgecolor='black')
+plt.xlabel('Value Range')
+plt.ylabel('Frequency (%)')
+plt.title('Histogram of Sorted Random Values')
+plt.xticks(bin_edges)
+plt.show()
+
+#calcolo della media e della deviazione standard
+mean = np.mean(sorted_array)
+std_dev = np.std(sorted_array)
+print(f'Mean: {mean},Standard Deviation: {std_dev}')
+ #calcolo del valore massimo e minimo dell'array
+max_value = np.max(sorted_array)
+min_value = np.min(sorted_array)
+print(f'Max Value: {max_value}, Min Value: {min_value}')
+#calolo del tempo impiegato dalla cpu ad ordinare l'array e tempo totale nel compilar il codice
+import time
+start_time = time.time()
+#ordinamamento dell'array
+bubble_sort(sorted_array)
+end_time = time.time()
+cpu_time = end_time - start_time
+print(f'CPU Time for sorting the array: {cpu_time} seconds ')
+total_time = time.process_time()
+print(f'Total CPU Time: {total_time} seconds ')
