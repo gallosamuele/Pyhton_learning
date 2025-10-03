@@ -1,30 +1,31 @@
-# Istogramma di valori casuali
+# Random Values Histogram
 
-Questo progetto genera **1000 numeri casuali** distribuiti uniformemente nell'intervallo [0,1) e li analizza tramite un semplice algoritmo di **bubble sort** (a scopo didattico).  
+This project generates **1000 random numbers** uniformly distributed in the interval [0,1) and analyzes them using a simple **bubble sort** algorithm (for educational purposes).  
 
-Successivamente, i valori vengono suddivisi in **10 intervalli uguali** e viene calcolata la **frequenza relativa** (percentuale) di occorrenza di ciascun intervallo.
+The values are then divided into **10 equal intervals**, and the **relative frequency** (percentage) of each interval is calculated.
 
-## Grafico risultante
+## Resulting Plot
 
-Il codice produce un **istogramma della distribuzione dei numeri casuali**:
+The code produces a **histogram of the random numbers distribution**:
 
-- **Asse X:** intervalli [0.0–0.1), [0.1–0.2), … [0.9–1.0)  
-- **Asse Y:** percentuale di valori osservati in ciascun intervallo  
+- **X-axis:** intervals [0.0–0.1), [0.1–0.2), … [0.9–1.0)  
+- **Y-axis:** percentage of values observed in each interval  
 
-Poiché i numeri sono generati secondo una distribuzione uniforme, ci si aspetta che ogni barra sia circa il **10%**, con leggere fluttuazioni dovute al numero finito di campioni.
+Since the numbers are generated according to a uniform distribution, each bar is expected to be approximately **10%**, with slight fluctuations due to the finite number of samples.
 
-## Obiettivo del progetto
+## Project Goals
 
-- Verificare visivamente la bontà del generatore di numeri casuali  
-- Praticare la manipolazione di array e l’ordinamento di dati  
-- Creare visualizzazioni semplici e interpretabili con Python
+- Visually verify the quality of the random number generator  
+- Practice array manipulation and data sorting  
+- Create simple and interpretable visualizations with Python
 
-## Tecnologie utilizzate
+## Technologies Used
 
 - Python  
-- NumPy (generazione numeri casuali, array)  
-- Matplotlib (grafico)  
+- NumPy (random number generation, arrays)  
+- Matplotlib (plotting)  
 
 ---
 
-> Questo progetto fa parte di una raccolta di mini-esperimenti di apprendimento Python.
+> This project is part of a collection of mini Python learning experiments.
+
