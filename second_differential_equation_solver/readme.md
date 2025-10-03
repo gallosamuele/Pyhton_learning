@@ -1,6 +1,6 @@
-# Risolutore ODE di Secondo Ordine
+# Second-Order ODE Solver
 
-Questo programma risolve equazioni differenziali lineari omogenee del secondo ordine con coefficienti costanti della forma:
+This program solves second-order linear homogeneous differential equations with constant coefficients of the form:
 
 \[
 x''(t) + b \, x'(t) + c \, x(t) = 0
@@ -8,24 +8,23 @@ x''(t) + b \, x'(t) + c \, x(t) = 0
 
 ---
 
-## Funzionalità
+## Features
 
-- Input interattivo dei coefficienti \(b\) e \(c\).  
-- Gestione dei tre casi principali:
-  - **Radici reali distinte**  
-  - **Radice reale doppia**  
-  - **Radici complesse**  
-- Calcolo della soluzione simbolica tramite **Sympy**.  
-- Conversione della soluzione simbolica in funzione numerica per il **plot della soluzione** con Matplotlib.  
-- Possibilità di scegliere le costanti arbitrarie \(A\) e \(B\) della soluzione generale.  
+- Interactive input of the coefficients \(b\) and \(c\).  
+- Handles the three main cases:
+  - **Distinct real roots**  
+  - **Repeated real root**  
+  - **Complex roots**  
+- Computes the symbolic solution using **Sympy**.  
+- Converts the symbolic solution into a numerical function for the **plot of the solution** with Matplotlib.  
+- Allows choosing arbitrary constants \(A\) and \(B\) of the general solution.  
 
 ---
-
-## Esempio di utilizzo
+## Usage Example
 
 ```bash
 $ python3 second_order_ode.py
-Inserisci b: 2
-Inserisci c: 1
-Costante A (default=1): 1
-Costante B (default=1): 1
+Enter b: 2
+Enter c: 1
+Constant A (default=1): 1
+Constant B (default=1): 1
